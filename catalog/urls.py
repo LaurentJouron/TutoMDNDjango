@@ -1,7 +1,7 @@
-from django.urls import include, path
-from . import views
+from django.urls import path
+from catalog import views
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('catalog/', include('catalog.urls')),
+    # path('books/', views.BookListView.as_view(), name='books'),
 ]
